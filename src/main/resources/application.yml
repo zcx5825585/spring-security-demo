@@ -1,0 +1,26 @@
+spring:
+    datasource:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://127.0.0.1:3306/admin?characterEncoding=UTF-8&serverTimezone=GMT
+        username: root
+        password: sa123
+    jpa:
+        show-sql: true
+    cache:
+        type: redis
+    redis:
+        host: 127.0.0.1
+        port: 6379
+        database: 0
+        jedis:
+            pool:
+                max-active: 20
+                min-idle: 2
+                max-wait: 300ms
+
+
+token:
+    tokenHead: Authorization
+    tokenKey: 123456
+    tokenPrefix: zcx
+    expirationtime: 3600000
